@@ -1,0 +1,21 @@
+---
+title: "Evictions Report"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+```
+This is my report. The dataset containe `r num_evictions` eviction notices.
+
+## Zipcode analysis
+
+The 10 zipcodes with the highest number of evictions:
+
+```{r, echo=FALSE}
+kable(evictions_by_zipcode, col.names = c("Zipcode", "Number of evictions"))
+
+```
+
